@@ -6,9 +6,9 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 public class Client {
 
     public static void main(String[] args) {
-        ApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
-        Rifle rifle = context.getBean(Rifle.class);
-        Ammo ammo = context.getBean(Ammo.class);
+        final ApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
+        final Rifle rifle = context.getBean(Rifle.class);
+        final Ammo ammo = context.getBean(Ammo.class);
         rifle.setAmmo(ammo);
         rifle.doShot();
     }
